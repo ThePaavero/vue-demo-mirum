@@ -5,7 +5,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     mainTitle: 'Example Vue Application',
-    introText: 'Hello, world!'
+    introText: 'Hello, world!',
+    showDebugForm: false
   },
   mutations: {
     updateMainTitle(state, newMainTitle){
@@ -13,6 +14,9 @@ const store = new Vuex.Store({
     },
     updateIntroText(state, newIntroText){
       state.introText = newIntroText
+    },
+    openDebugForm(state, bool){
+      state.showDebugForm = bool
     }
   }
 })

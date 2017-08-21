@@ -1,13 +1,16 @@
 <template>
   <div>
+    <a href='#' @click.prevent='closeDebugForm'>Close</a>
     <form @keyup='updateState'>
       <div class='field-wrapper'>
         <label>
+          Main Title
           <input type='text' v-model='mainTitle'/>
         </label>
       </div>
       <div class='field-wrapper'>
         <label>
+          Intro text
           <input type='text' v-model='introText'/>
         </label>
       </div>
@@ -28,6 +31,9 @@
       updateState(){
         this.$store.commit('updateMainTitle', this.mainTitle)
         this.$store.commit('updateIntroText', this.introText)
+      },
+      closeDebugForm(){
+        this.$store.commit('openDebugForm', false)
       }
     }
   }
@@ -35,6 +41,14 @@
 
 <style scoped>
   form {
+    text-align: left;
     background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding: 5px;
+  }
+
+  form .field-wrapper {
+    padding: 10px;
+    border: solid 1px rgba(0, 0, 0, 0.2);
   }
 </style>
