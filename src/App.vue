@@ -1,16 +1,25 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <Home/>
+    <Home
+      :mainTitle='this.$store.state.mainTitle'
+      :introText='this.$store.state.introText'
+    />
+    <DebugForm/>
   </div>
 </template>
 
 <script>
   import Home from './components/Home'
+  import DebugForm from './components/DebugForm'
 
   export default {
     components: {
-      Home
+      Home,
+      DebugForm
+    },
+    data() {
+      return {}
     }
   }
 </script>

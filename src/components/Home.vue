@@ -1,14 +1,15 @@
 <template>
   <div>
-    <h1>Vue App</h1>
+    <h1>{{ mainTitle }}</h1>
     <p>
-      Hello :)
+      {{ introText }}
     </p>
   </div>
 </template>
 
 <script>
   export default {
+    props: ['mainTitle', 'introText'],
     data () {
       return {}
     }
