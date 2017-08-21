@@ -42,7 +42,7 @@
 <style scoped>
   form {
     text-align: left;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.1);
     display: flex;
     padding: 5px;
     position: relative;
@@ -57,9 +57,17 @@
     font-size: 20px;
   }
 
+  form .field-wrapper label {
+    font-size: 13px;
+  }
+
   form .field-wrapper {
     padding: 10px;
-    border: solid 1px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     margin: 0 1px;
+  }
+
+  input[type=text] {
+    padding: 2px 3px;
   }
 </style>

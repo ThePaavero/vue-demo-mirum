@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <Home
-      :mainTitle='this.$store.state.mainTitle'
-      :introText='this.$store.state.introText'
-    />
+    <Home :mainTitle='this.$store.state.mainTitle' :introText='this.$store.state.introText'/>
     <transition name="fade" mode="out-in">
       <DebugForm v-if='this.$store.state.showDebugForm'/>
       <DebugFormToggler v-else/>
