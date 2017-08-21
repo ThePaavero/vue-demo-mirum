@@ -9,13 +9,13 @@ const store = new Vuex.Store({
     showDebugForm: false
   },
   mutations: {
-    updateMainTitle(state, newMainTitle){
+    updateMainTitle(state, newMainTitle) {
       state.mainTitle = newMainTitle
     },
-    updateIntroText(state, newIntroText){
+    updateIntroText(state, newIntroText) {
       state.introText = newIntroText
     },
-    openDebugForm(state, bool){
+    openDebugForm(state, bool) {
       state.showDebugForm = bool
     }
   }

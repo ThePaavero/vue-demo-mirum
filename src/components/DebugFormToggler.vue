@@ -5,13 +5,13 @@
 </template>
 
 <script>
-  export default{
+  export default {
     props: [],
     data() {
       return {}
     },
     methods: {
-      openForm(){
+      openForm() {
         this.$store.commit('openDebugForm', true)
       }
     }
