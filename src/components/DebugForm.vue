@@ -1,11 +1,16 @@
 <template>
   <div>
-    <form>
-      <p>
+    <form @keyup='updateState'>
+      <div class='field-wrapper'>
         <label>
-          <input type='text' value='heheheh'/>
+          <input type='text' v-model='mainTitle'/>
         </label>
-      </p>
+      </div>
+      <div class='field-wrapper'>
+        <label>
+          <input type='text' v-model='introText'/>
+        </label>
+      </div>
     </form>
   </div>
 </template>
@@ -14,9 +19,17 @@
   export default{
     props: [],
     data() {
-      return {}
+      return {
+        mainTitle: this.$store.state.mainTitle,
+        introText: this.$store.state.introText,
+      }
     },
-    methods: {}
+    methods: {
+      updateState(){
+        this.$store.commit('updateMainTitle', this.mainTitle)
+        this.$store.commit('updateIntroText', this.introText)
+      }
+    }
   }
 </script>
 

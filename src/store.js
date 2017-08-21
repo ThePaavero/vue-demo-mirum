@@ -7,7 +7,14 @@ const store = new Vuex.Store({
     mainTitle: 'Example Vue Application',
     introText: 'Hello, world!'
   },
-  mutations: {}
+  mutations: {
+    updateMainTitle(state, newMainTitle){
+      state.mainTitle = newMainTitle
+    },
+    updateIntroText(state, newIntroText){
+      state.introText = newIntroText
+    }
+  }
 })
 
 export default store
