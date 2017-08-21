@@ -46,7 +46,6 @@
     display: flex;
     padding: 5px;
     position: relative;
-    margin-top: 5vh;
   }
 
   .closer {
