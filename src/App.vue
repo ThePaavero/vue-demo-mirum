@@ -5,8 +5,10 @@
       :mainTitle='this.$store.state.mainTitle'
       :introText='this.$store.state.introText'
     />
-    <DebugForm v-if='this.$store.state.showDebugForm'/>
-    <DebugFormToggler v-else/>
+    <transition name="fade" mode="out-in">
+      <DebugForm v-if='this.$store.state.showDebugForm'/>
+      <DebugFormToggler v-else/>
+    </transition>
   </div>
 </template>
 
@@ -20,9 +22,6 @@
       Home,
       DebugForm,
       DebugFormToggler
-    },
-    data() {
-      return {}
     }
   }
 </script>
@@ -32,8 +31,15 @@
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    padding: 10vh 10vw;
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .1s
+  }
+
+  .fade-enter, .fade-leave-to {
+    opacity: 0
   }
 </style>

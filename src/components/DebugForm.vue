@@ -1,7 +1,7 @@
 <template>
   <div>
-    <a href='#' @click.prevent='closeDebugForm'>Close</a>
     <form @keyup='updateState'>
+      <a href='#' @click.prevent='closeDebugForm' class='closer'>×</a>
       <div class='field-wrapper'>
         <label>
           Main Title
@@ -45,10 +45,21 @@
     background: rgba(0, 0, 0, 0.2);
     display: flex;
     padding: 5px;
+    position: relative;
+    margin-top: 5vh;
+  }
+
+  .closer {
+    color: inherit;
+    position: absolute;
+    text-decoration: none;
+    right: 10px;
+    font-size: 20px;
   }
 
   form .field-wrapper {
     padding: 10px;
-    border: solid 1px rgba(0, 0, 0, 0.2);
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    margin: 0 1px;
   }
 </style>

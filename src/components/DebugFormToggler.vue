@@ -19,4 +19,8 @@
 </script>
 
 <style scoped>
+  a {
+    color: inherit;
+    font-size: 13px;
+  }
 </style>
