@@ -14,9 +14,6 @@
 <script>
   export default{
     props: ['title', 'arrayToPrint'],
-    data() {
-      return {}
-    },
     methods: {
       deleteItem(item) {
         this.$store.commit('deleteDynamicDemoArrayItem', item)

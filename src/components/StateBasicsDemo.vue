@@ -28,11 +28,7 @@
     props: ['title', 'mainTitle', 'mainTitleFormatted', 'introText'],
     components: {
       DebugForm
-    },
-    data() {
-      return {}
-    },
-    methods: {}
+    }
   }
 </script>
 

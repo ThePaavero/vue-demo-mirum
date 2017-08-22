@@ -5,16 +5,16 @@
       <span class='heart'>❤</span>
       <img src='./assets/logo.png' class='vue'>
     </header>
-    <Home/>
+    <DemoArea/>
   </div>
 </template>
 
 <script>
-  import Home from './components/Home'
+  import DemoArea from './components/DemoArea'
 
   export default {
     components: {
-      Home
+      DemoArea
     }
   }
 </script>
@@ -22,8 +22,8 @@
 <style>
   #app {
     font-family: Arial, sans-serif;
-    color: #2c3e50;
-    padding: 10vh 10vw;
+    color: #131b26;
+    padding: 4vh 10vw;
   }
 
   .fade-enter-active, .fade-leave-active {
@@ -35,7 +35,7 @@
   }
 
   header {
-    margin-bottom: 10vh;
+    margin-bottom: 4vh;
   }
 
   header img.mirum {
@@ -50,8 +50,8 @@
   }
 
   header img.vue {
-    width: 6vw;
-    transform: translateY(0.5vw);
+    width: 9vw;
+    transform: translateY(1.5vw);
   }
 
   .action-button {

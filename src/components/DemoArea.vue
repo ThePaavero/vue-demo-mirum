@@ -33,9 +33,6 @@
   import ArrayDemo from './ArrayDemo.vue'
 
   export default {
-    data () {
-      return {}
-    },
     components: {
       StateBasicsDemo,
       CtrlKeyCombinationDemo,

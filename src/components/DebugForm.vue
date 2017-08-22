@@ -19,7 +19,6 @@
 
 <script>
   export default{
-    props: [],
     data() {
       return {
         mainTitle: this.$store.state.mainTitle,
