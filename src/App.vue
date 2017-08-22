@@ -1,13 +1,17 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div id='app'>
+    <header>
+      <img src='./assets/mirum.jpg' class='mirum'>
+      <span class='heart'>❤</span>
+      <img src='./assets/logo.png' class='vue'>
+    </header>
     <Home
       :mainTitle='this.$store.state.mainTitle'
       :mainTitleFormatted='this.$store.getters.getFormattedMainTitle'
       :introText='this.$store.state.introText'
     />
     <div class='debug-wrapper'>
-      <transition name="fade" mode="out-in">
+      <transition name='fade' mode='out-in'>
         <DebugForm v-if='this.$store.state.showDebugForm'/>
         <DebugFormToggler v-else/>
       </transition>
@@ -49,4 +53,23 @@
   .debug-wrapper {
     margin-top: 10vh;
   }
+
+  header {
+  }
+
+  header img.mirum {
+    width: 20vw;
+  }
+
+  header span {
+    display: inline-block;
+    font-size: 5vw;
+    padding: 0 2vw;
+    color: #ff214b;
+  }
+
+  header img.vue {
+    width: 6vw;
+  }
+
 </style>
