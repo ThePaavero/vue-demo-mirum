@@ -1,10 +1,13 @@
 <template>
   <div>
-    <h1>{{ mainTitle }}</h1>
-    <h2>{{ mainTitleFormatted }}</h2>
-    <p>
-      {{ introText }}
-    </p>
+    <section>
+      <StateBasicsDemo
+        title='State basics'
+        :mainTitle='this.$store.state.mainTitle'
+        :mainTitleFormatted='this.$store.getters.getFormattedMainTitle'
+        :introText='this.$store.state.introText'
+      />
+    </section>
     <section>
       <ArrayDemo
         title='Demo array from state'
@@ -24,16 +27,17 @@
 </template>
 
 <script>
+  import StateBasicsDemo from './StateBasicsDemo.vue'
   import CtrlKeyCombinationDemo from './CtrlKeyCombinationDemo.vue'
   import DynamicArrayDemo from './DynamicArrayDemo.vue'
   import ArrayDemo from './ArrayDemo.vue'
 
   export default {
-    props: ['mainTitle', 'mainTitleFormatted', 'introText'],
     data () {
       return {}
     },
     components: {
+      StateBasicsDemo,
       CtrlKeyCombinationDemo,
       DynamicArrayDemo,
       ArrayDemo

@@ -5,30 +5,16 @@
       <span class='heart'>❤</span>
       <img src='./assets/logo.png' class='vue'>
     </header>
-    <Home
-      :mainTitle='this.$store.state.mainTitle'
-      :mainTitleFormatted='this.$store.getters.getFormattedMainTitle'
-      :introText='this.$store.state.introText'
-    />
-    <div class='debug-wrapper'>
-      <transition name='fade' mode='out-in'>
-        <DebugForm v-if='this.$store.state.showDebugForm'/>
-        <DebugFormToggler v-else/>
-      </transition>
-    </div>
+    <Home/>
   </div>
 </template>
 
 <script>
   import Home from './components/Home'
-  import DebugForm from './components/DebugForm'
-  import DebugFormToggler from './components/DebugFormToggler'
 
   export default {
     components: {
-      Home,
-      DebugForm,
-      DebugFormToggler
+      Home
     }
   }
 </script>
