@@ -37,7 +37,8 @@
 <style scoped>
   form {
     display: flex;
-    position: relative;
+    flex-direction: row;
+    align-items: stretch;
   }
 
   form .field-wrapper label {
@@ -48,9 +49,12 @@
     padding: 10px;
     background: rgba(0, 0, 0, 0.1);
     margin: 0 1px;
+    flex: 1;
   }
 
   input[type=text] {
     padding: 2px 3px;
+    display: block;
+    width: 98%;
   }
 </style>

@@ -23,7 +23,7 @@
         if (this.currentString === '') {
           return
         }
-        window.alert(this.currentString)
+        window.alert(`You wrote:\n${this.currentString}`)
         this.currentString = ''
       }
     }

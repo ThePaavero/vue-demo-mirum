@@ -21,9 +21,14 @@
 
 <style>
   #app {
-    font-family: Arial, sans-serif;
+    font-family: 'Asap', sans-serif;
     color: #131b26;
     padding: 4vh 10vw;
+  }
+
+  input[type=text],
+  textarea {
+    font-family: 'Asap', sans-serif;
   }
 
   .fade-enter-active, .fade-leave-active {
