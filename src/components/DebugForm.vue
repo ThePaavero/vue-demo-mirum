@@ -26,7 +26,7 @@
       }
     },
     methods: {
-      updateState(){
+      updateState() {
         this.$store.commit('updateMainTitle', this.mainTitle)
         this.$store.commit('updateIntroText', this.introText)
       }

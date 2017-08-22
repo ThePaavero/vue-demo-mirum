@@ -8,8 +8,8 @@
 </template>
 
 <script>
-  export default{
-    props: ['arrayToPrint','title']
+  export default {
+    props: ['arrayToPrint', 'title']
   }
 </script>
 

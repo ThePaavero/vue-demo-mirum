@@ -24,7 +24,7 @@
 <script>
   import DebugForm from './DebugForm'
 
-  export default{
+  export default {
     props: ['title', 'mainTitle', 'mainTitleFormatted', 'introText'],
     components: {
       DebugForm

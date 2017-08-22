@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  export default{
+  export default {
     props: ['title', 'arrayToPrint'],
     methods: {
       deleteItem(item) {
