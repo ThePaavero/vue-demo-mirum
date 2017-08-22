@@ -5,14 +5,35 @@
     <p>
       {{ introText }}
     </p>
+    <section>
+      <ArrayDemo
+        title='Demo array from state'
+        :arrayToPrint='this.$store.state.demoArray'
+      />
+    </section>
+    <section>
+      <DynamicArrayDemo
+        title='Demo array from state with functionality'
+        :arrayToPrint='this.$store.state.demoDynamicArray'
+      />
+    </section>
   </div>
 </template>
 
 <script>
+  import DynamicArrayDemo from './DynamicArrayDemo.vue'
+
+  import ArrayDemo from './ArrayDemo.vue'
+
   export default {
     props: ['mainTitle', 'mainTitleFormatted', 'introText'],
     data () {
       return {}
+    },
+    components: {
+  DynamicArrayDemo,
+
+      ArrayDemo
     }
   }
 </script>
@@ -34,5 +55,9 @@
 
   a {
     color: #42b983;
+  }
+
+  section {
+    border-top: solid 2px rgba(0, 0, 0, 0.25);
   }
 </style>
