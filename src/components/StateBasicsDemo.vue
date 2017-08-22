@@ -33,4 +33,7 @@
 </script>
 
 <style scoped>
+  .debug-wrapper {
+    margin-top: 10px;
+  }
 </style>

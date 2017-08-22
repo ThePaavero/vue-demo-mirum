@@ -36,10 +36,6 @@
     opacity: 0
   }
 
-  .debug-wrapper {
-    margin-top: 10vh;
-  }
-
   header {
     margin-bottom: 10vh;
   }
@@ -66,6 +62,12 @@
     padding: 1px 4px;
     background: rgba(41, 155, 113, 0.5);
     border-radius: 3px;
+  }
+
+  ul {
+    margin-left: 20px;
+    list-style-type: square;
+    padding: 0;
   }
 
 </style>
