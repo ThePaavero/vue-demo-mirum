@@ -5,7 +5,6 @@ Vue.use(Vuex)
 const state = {
   mainTitle: 'Example Vue Application',
   introText: 'Hello, world!',
-  showDebugForm: false,
   demoArray: ['A', 'B', 'C'],
   demoDynamicArray: [1, 2, 3, 4],
   demoDynamicArrayItemsAdded: 0
@@ -17,9 +16,6 @@ const mutations = {
   },
   updateIntroText(state, newIntroText) {
     state.introText = newIntroText
-  },
-  openDebugForm(state, bool) {
-    state.showDebugForm = bool
   },
   deleteDynamicDemoArrayItem(state, index) {
     state.demoDynamicArray.splice(state.demoDynamicArray.indexOf(index), 1)

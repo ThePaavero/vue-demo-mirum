@@ -68,4 +68,8 @@
     border-top: solid 2px rgba(0, 0, 0, 0.25);
     padding: 20px 0;
   }
+
+  section:first-of-type {
+    border: none;
+  }
 </style>

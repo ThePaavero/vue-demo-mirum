@@ -1,7 +1,6 @@
 <template>
   <div>
     <form @keyup='updateState'>
-      <a href='#' @click.prevent='closeDebugForm' class='closer'>×</a>
       <div class='field-wrapper'>
         <label>
           Main Title
@@ -31,9 +30,6 @@
       updateState(){
         this.$store.commit('updateMainTitle', this.mainTitle)
         this.$store.commit('updateIntroText', this.introText)
-      },
-      closeDebugForm(){
-        this.$store.commit('openDebugForm', false)
       }
     }
   }
@@ -42,18 +38,8 @@
 <style scoped>
   form {
     text-align: left;
-    background: rgba(0, 0, 0, 0.1);
     display: flex;
-    padding: 5px;
     position: relative;
-  }
-
-  .closer {
-    color: inherit;
-    position: absolute;
-    text-decoration: none;
-    right: 10px;
-    font-size: 20px;
   }
 
   form .field-wrapper label {

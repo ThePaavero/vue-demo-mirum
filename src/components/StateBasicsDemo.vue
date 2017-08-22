@@ -1,15 +1,21 @@
 <template>
   <div>
     <h3>{{ title }}</h3>
-    <h4>{{ mainTitle }}</h4>
-    <h5>{{ mainTitleFormatted }}</h5>
+    <h4>
+      <small>mainTitle:</small>
+      {{ mainTitle }}
+    </h4>
+    <h5>
+      <small>mainTitleFormatted:</small>
+      {{ mainTitleFormatted }}
+    </h5>
     <p>
+      <small>introText:</small>
       {{ introText }}
     </p>
     <div class='debug-wrapper'>
       <transition name='fade' mode='out-in'>
-        <DebugForm v-if='this.$store.state.showDebugForm'/>
-        <DebugFormToggler v-else/>
+        <DebugForm/>
       </transition>
     </div>
   </div>
@@ -17,13 +23,11 @@
 
 <script>
   import DebugForm from './DebugForm'
-  import DebugFormToggler from './DebugFormToggler'
 
   export default{
     props: ['title', 'mainTitle', 'mainTitleFormatted', 'introText'],
     components: {
-      DebugForm,
-      DebugFormToggler
+      DebugForm
     },
     data() {
       return {}
@@ -35,5 +39,9 @@
 <style scoped>
   .debug-wrapper {
     margin-top: 10px;
+  }
+
+  small {
+    opacity: 0.6;
   }
 </style>
