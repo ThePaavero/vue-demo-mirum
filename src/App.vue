@@ -55,6 +55,7 @@
   }
 
   header {
+    margin-bottom: 10vh;
   }
 
   header img.mirum {
@@ -70,6 +71,15 @@
 
   header img.vue {
     width: 6vw;
+  }
+
+  .action-button {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1px 4px;
+    background: rgba(41, 155, 113, 0.5);
+    border-radius: 3px;
   }
 
 </style>
