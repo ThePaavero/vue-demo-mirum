@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>{{ mainTitle }}</h1>
+    <h2>{{ mainTitleFormatted }}</h2>
     <p>
       {{ introText }}
     </p>
@@ -9,7 +10,7 @@
 
 <script>
   export default {
-    props: ['mainTitle', 'introText'],
+    props: ['mainTitle', 'mainTitleFormatted', 'introText'],
     data () {
       return {}
     }

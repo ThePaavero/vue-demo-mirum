@@ -8,6 +8,11 @@ const store = new Vuex.Store({
     introText: 'Hello, world!',
     showDebugForm: false
   },
+  getters: {
+    getFormattedMainTitle(state) {
+      return `"${state.mainTitle}"`.toUpperCase()
+    }
+  },
   mutations: {
     updateMainTitle(state, newMainTitle) {
       state.mainTitle = newMainTitle
