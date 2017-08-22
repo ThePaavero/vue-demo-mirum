@@ -9,7 +9,7 @@ const store = new Vuex.Store({
     showDebugForm: false,
     demoArray: ['A', 'B', 'C'],
     demoDynamicArray: [1, 2, 3, 4],
-    dynamicArrayItemsAdded: 0
+    demoDynamicArrayItemsAdded: 0
   },
   getters: {
     getFormattedMainTitle(state) {
@@ -30,9 +30,9 @@ const store = new Vuex.Store({
       state.demoDynamicArray.splice(state.demoDynamicArray.indexOf(index), 1)
     },
     addOneToDynamicDemoArray(state) {
-      state.dynamicArrayItemsAdded++
+      state.demoDynamicArrayItemsAdded++
       state.demoDynamicArray.push(
-          'Added item #' + state.dynamicArrayItemsAdded)
+          'Added item #' + state.demoDynamicArrayItemsAdded)
     }
   }
 })

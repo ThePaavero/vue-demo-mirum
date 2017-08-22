@@ -17,12 +17,15 @@
         :arrayToPrint='this.$store.state.demoDynamicArray'
       />
     </section>
+    <section>
+      <CtrlKeyCombinationDemo title='Key combinations'/>
+    </section>
   </div>
 </template>
 
 <script>
+  import CtrlKeyCombinationDemo from './CtrlKeyCombinationDemo.vue'
   import DynamicArrayDemo from './DynamicArrayDemo.vue'
-
   import ArrayDemo from './ArrayDemo.vue'
 
   export default {
@@ -31,8 +34,8 @@
       return {}
     },
     components: {
-  DynamicArrayDemo,
-
+      CtrlKeyCombinationDemo,
+      DynamicArrayDemo,
       ArrayDemo
     }
   }
@@ -59,5 +62,6 @@
 
   section {
     border-top: solid 2px rgba(0, 0, 0, 0.25);
+    padding: 20px 0;
   }
 </style>

@@ -4,10 +4,10 @@
     <ul>
       <li v-for='item in arrayToPrint'>
         {{ item }}
-        <a href='#' @click.prevent='deleteItem(item)'>×</a>
+        <a href='#' title='Delete item' @click.prevent='deleteItem(item)'>×</a>
       </li>
     </ul>
-    <a href='#' @click.prevent='addItem'>+</a>
+    <a href='#' title='Click to add item to array' @click.prevent='addItem'>+</a>
   </div>
 </template>
 
@@ -29,4 +29,15 @@
 </script>
 
 <style scoped>
+  li {
+    padding: 5px 0;
+  }
+
+  a {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1px 4px;
+    background: rgba(41, 155, 113, 0.5);
+  }
 </style>

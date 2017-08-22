@@ -6,10 +6,12 @@
       :mainTitleFormatted='this.$store.getters.getFormattedMainTitle'
       :introText='this.$store.state.introText'
     />
-    <transition name="fade" mode="out-in">
-      <DebugForm v-if='this.$store.state.showDebugForm'/>
-      <DebugFormToggler v-else/>
-    </transition>
+    <div class='debug-wrapper'>
+      <transition name="fade" mode="out-in">
+        <DebugForm v-if='this.$store.state.showDebugForm'/>
+        <DebugFormToggler v-else/>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -42,5 +44,9 @@
 
   .fade-enter, .fade-leave-to {
     opacity: 0
+  }
+
+  .debug-wrapper {
+    margin-top: 10vh;
   }
 </style>
