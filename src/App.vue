@@ -63,9 +63,10 @@
     color: inherit;
     display: inline-block;
     text-decoration: none;
-    padding: 1px 4px;
-    background: rgba(41, 155, 113, 0.5);
-    border-radius: 3px;
+    padding: 2px 4px;
+    background: rgba(40, 155, 113, 0.5);
+    border-radius: 5px;
+    font-size: 1vw;
   }
 
   ul {
@@ -73,5 +74,4 @@
     list-style-type: square;
     padding: 0;
   }
-
 </style>
