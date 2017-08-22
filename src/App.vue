@@ -21,9 +21,7 @@
 
 <style>
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: Arial, sans-serif;
     color: #2c3e50;
     padding: 10vh 10vw;
   }
@@ -53,6 +51,7 @@
 
   header img.vue {
     width: 6vw;
+    transform: translateY(0.5vw);
   }
 
   .action-button {
