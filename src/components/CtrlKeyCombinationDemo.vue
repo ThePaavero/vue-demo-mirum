@@ -5,7 +5,7 @@
       type='text'
       placeholder='Focus here, write something and press CTRL + Down arrow'
       v-model='currentString'
-      @keydown.ctrl.down.prevent='doPseudoSubmit'
+      @keydown.ctrl.down.prevent='submitChanges'
     />
   </div>
 </template>
@@ -20,7 +20,7 @@
       }
     },
     methods: {
-      doPseudoSubmit() {
+      submitChanges() {
         if (this.currentString === '') {
           return
         }

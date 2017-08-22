@@ -37,7 +37,6 @@
 
 <style scoped>
   form {
-    text-align: left;
     display: flex;
     position: relative;
   }
