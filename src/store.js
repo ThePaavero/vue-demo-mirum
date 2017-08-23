@@ -8,7 +8,8 @@ const state = {
   introText: 'Hello, world!',
   demoArray: ['A', 'B', 'C'],
   demoDynamicArray: [1, 2, 3, 4],
-  demoDynamicArrayItemsAdded: 0
+  demoDynamicArrayItemsAdded: 0,
+  dynamicImageWidth: 150
 }
 
 const mutations = {
@@ -25,6 +26,9 @@ const mutations = {
     state.demoDynamicArrayItemsAdded++
     state.demoDynamicArray.push(
         'Added item #' + state.demoDynamicArrayItemsAdded)
+  },
+  updateDynamicImageWidth(state, newValue) {
+    state.dynamicImageWidth = newValue
   }
 }
 

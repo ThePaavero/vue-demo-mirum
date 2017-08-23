@@ -26,10 +26,14 @@
     <section>
       <EmitDemo title='Emitting from child to parent'/>
     </section>
+    <section>
+      <DynamicStylesDemo title='Dynamic styles'/>
+    </section>
   </div>
 </template>
 
 <script>
+  import DynamicStylesDemo from './DynamicStylesDemo.vue'
   import EmitDemo from './EmitDemo.vue'
   import StateBasicsDemo from './StateBasicsDemo.vue'
   import CtrlKeyCombinationDemo from './CtrlKeyCombinationDemo.vue'
@@ -38,6 +42,7 @@
 
   export default {
     components: {
+      DynamicStylesDemo,
       EmitDemo,
       StateBasicsDemo,
       CtrlKeyCombinationDemo,
