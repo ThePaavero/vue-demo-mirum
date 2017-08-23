@@ -27,7 +27,7 @@
       <EmitDemo title='Emitting from child to parent'/>
     </section>
     <section>
-      <DynamicStylesDemo title='Dynamic styles'/>
+      <DynamicStylesDemo title='Dynamic styles + persistent state (localStorage) example'/>
     </section>
   </div>
 </template>

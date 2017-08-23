@@ -6,7 +6,6 @@
       min='50'
       max='1400'
       @input='updateFromInput'
-      id='dynamicImageWidthRangeInput'
     />
     <img src='./../assets/mirum.jpg' class='mirum' :style='getInlineStyles()'>
   </div>
@@ -32,7 +31,7 @@
       },
       updateState(val) {
         this.$store.commit('updateDynamicImageWidth', val)
-        document.querySelector('#dynamicImageWidthRangeInput').value = val
+        this.$el.querySelector('input').value = val
       },
       getInlineStyles() {
         return 'width: ' + this.$store.state.dynamicImageWidth + 'px'
