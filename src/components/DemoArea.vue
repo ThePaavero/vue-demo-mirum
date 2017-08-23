@@ -7,32 +7,40 @@
         :mainTitleFormatted='this.$store.getters.getFormattedMainTitle'
         :introText='this.$store.state.introText'
       />
+      <SourceLink demoKey='StateBasicsDemo'/>
     </section>
     <section>
       <ArrayDemo
         title='Demo array from state'
         :arrayToPrint='this.$store.state.demoArray'
       />
+      <SourceLink demoKey='ArrayDemo'/>
     </section>
     <section>
       <DynamicArrayDemo
         title='Demo array from state with functionality'
         :arrayToPrint='this.$store.state.demoDynamicArray'
       />
+      <SourceLink demoKey='DynamicArrayDemo'/>
     </section>
     <section>
       <CtrlKeyCombinationDemo title='Key combinations'/>
+      <SourceLink demoKey='CtrlKeyCombinationDemo'/>
     </section>
     <section>
       <EmitDemo title='Emitting from child to parent'/>
+      <SourceLink demoKey='EmitDemo'/>
     </section>
     <section>
       <DynamicStylesDemo title='Dynamic styles + persistent state (localStorage) example'/>
+      <SourceLink demoKey='DynamicStylesDemo'/>
     </section>
   </div>
 </template>
 
 <script>
+  import SourceLink from './SourceLink.vue'
+
   import DynamicStylesDemo from './DynamicStylesDemo.vue'
   import EmitDemo from './EmitDemo.vue'
   import StateBasicsDemo from './StateBasicsDemo.vue'
@@ -42,6 +50,7 @@
 
   export default {
     components: {
+      SourceLink,
       DynamicStylesDemo,
       EmitDemo,
       StateBasicsDemo,

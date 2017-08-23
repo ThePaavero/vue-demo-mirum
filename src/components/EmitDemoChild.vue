@@ -4,10 +4,12 @@
       <small>(clicked {{ clickedCounter }} times)</small>
     </h5>
     <button @click='onButtonClicked'>Click to emit event to parent</button>
+    <SourceLink demoKey='EmitDemoChild'/>
   </div>
 </template>
 
 <script>
+  import SourceLink from './SourceLink'
   export default{
     data() {
       return {
@@ -20,6 +22,9 @@
         this.clickedCounter++
         this.$emit('childHasBeenClicked')
       }
+    },
+    components: {
+      SourceLink
     }
   }
 </script>
