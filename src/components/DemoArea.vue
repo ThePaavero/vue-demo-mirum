@@ -23,10 +23,14 @@
     <section>
       <CtrlKeyCombinationDemo title='Key combinations'/>
     </section>
+    <section>
+      <EmitDemo title='Emitting from child to parent'/>
+    </section>
   </div>
 </template>
 
 <script>
+  import EmitDemo from './EmitDemo.vue'
   import StateBasicsDemo from './StateBasicsDemo.vue'
   import CtrlKeyCombinationDemo from './CtrlKeyCombinationDemo.vue'
   import DynamicArrayDemo from './DynamicArrayDemo.vue'
@@ -34,6 +38,7 @@
 
   export default {
     components: {
+      EmitDemo,
       StateBasicsDemo,
       CtrlKeyCombinationDemo,
       DynamicArrayDemo,
