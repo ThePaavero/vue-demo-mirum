@@ -15,7 +15,7 @@
     props: ['title'],
     data() {
       return {
-        currentString: null
+        currentString: ''
       }
     },
     methods: {
