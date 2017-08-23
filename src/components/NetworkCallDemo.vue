@@ -8,9 +8,7 @@
       </div><!-- column -->
       <div class='column'>
         <h4>Output ({{ this.$store.state.networkDemoSubReddit || 'Nothing yet' }})</h4>
-        <div>
-          {{ this.$store.state.networkDemoOutput || '(Click the button to load some JSON from reddit.com)' }}
-        </div>
+        <div class='output-div' v-html='this.$store.state.networkDemoOutput || "Click the button!"'></div>
       </div><!-- column -->
     </div><!-- columns -->
   </div>
@@ -18,6 +16,7 @@
 
 <script>
   import axios from 'axios'
+  import prettyjson from 'prettyjson'
 
   let subRedditIndex = 0
   const subReddits = [
@@ -32,13 +31,17 @@
     return subReddits[subRedditIndex]
   }
 
+  const formatJson = (data) => {
+    return '<pre>' + prettyjson.render(data) + '</pre>'
+  }
+
   export default{
     props: ['title'],
     methods: {
       doNetworkCall() {
         const subReddit = getSubReddit()
-        axios.get('https://www.reddit.com/r/' + subReddit + '.json').then(response => {
-          this.$store.commit('updateNetworkDemoOutput', response.data)
+        axios.get('https://www.reddit.com/r/' + subReddit + '.json?limit=5').then(response => {
+          this.$store.commit('updateNetworkDemoOutput', formatJson(response.data))
           this.$store.commit('updateNetworkDemoSubReddit', subReddit)
         })
       }
@@ -56,13 +59,20 @@
   .column {
     flex-basis: 50%;
     overflow: auto;
+    height: 30vh;
     background: rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-right: solid 2px #fff;
-    height: 30vh;
   }
 
   .column:last-child {
     border: none;
+  }
+
+  .output-div {
+    background: #000;
+    color: greenyellow;
+    padding: 10px;
+    font-size: 11px;
   }
 </style>
