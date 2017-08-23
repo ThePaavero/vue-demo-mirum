@@ -9,15 +9,17 @@ const state = {
   demoArray: ['A', 'B', 'C'],
   demoDynamicArray: [1, 2, 3, 4],
   demoDynamicArrayItemsAdded: 0,
-  dynamicImageWidth: 150
+  dynamicImageWidth: 150,
+  networkDemoOutput: null,
+  networkDemoSubReddit: null
 }
 
 const mutations = {
-  updateMainTitle(state, newMainTitle) {
-    state.mainTitle = newMainTitle
+  updateMainTitle(state, val) {
+    state.mainTitle = val
   },
-  updateIntroText(state, newIntroText) {
-    state.introText = newIntroText
+  updateIntroText(state, val) {
+    state.introText = val
   },
   deleteDynamicDemoArrayItem(state, index) {
     state.demoDynamicArray.splice(state.demoDynamicArray.indexOf(index), 1)
@@ -27,8 +29,14 @@ const mutations = {
     state.demoDynamicArray.push(
         'Added item #' + state.demoDynamicArrayItemsAdded)
   },
-  updateDynamicImageWidth(state, newValue) {
-    state.dynamicImageWidth = newValue
+  updateDynamicImageWidth(state, val) {
+    state.dynamicImageWidth = val
+  },
+  updateNetworkDemoOutput(state, val) {
+    state.networkDemoOutput = val
+  },
+  updateNetworkDemoSubReddit(state, val) {
+    state.networkDemoSubReddit = val
   }
 }
 

@@ -69,6 +69,11 @@
     font-size: 1vw;
   }
 
+  button {
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+
   ul {
     margin-left: 20px;
     list-style-type: square;

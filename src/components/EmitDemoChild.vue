@@ -36,11 +36,6 @@
     padding-bottom: 20px;
   }
 
-  button {
-    cursor: pointer;
-    padding: 5px 10px;
-  }
-
   small {
     opacity: 0.6;
   }

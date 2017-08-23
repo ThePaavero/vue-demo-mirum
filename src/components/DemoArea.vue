@@ -35,12 +35,16 @@
       <DynamicStylesDemo title='Dynamic styles + persistent state (localStorage) example'/>
       <SourceLink demoKey='DynamicStylesDemo'/>
     </section>
+    <section>
+      <NetworkCallDemo title='Network call demo'/>
+      <SourceLink demoKey='NetworkCallDemo'/>
+    </section>
   </div>
 </template>
 
 <script>
+  import NetworkCallDemo from './NetworkCallDemo.vue'
   import SourceLink from './SourceLink.vue'
-
   import DynamicStylesDemo from './DynamicStylesDemo.vue'
   import EmitDemo from './EmitDemo.vue'
   import StateBasicsDemo from './StateBasicsDemo.vue'
@@ -50,6 +54,7 @@
 
   export default {
     components: {
+      NetworkCallDemo,
       SourceLink,
       DynamicStylesDemo,
       EmitDemo,
