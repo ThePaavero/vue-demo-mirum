@@ -7,7 +7,7 @@
         <button @click.prevent='doNetworkCall'>Click to fetch random Reddit feed</button>
       </div><!-- column -->
       <div class='column'>
-        <h4>Output ({{ this.$store.state.networkDemoSubReddit || 'Nothing yet' }})</h4>
+        <h4>Output ({{ 'reddit.com/r/' + this.$store.state.networkDemoSubReddit || 'Nothing yet' }})</h4>
         <div class='output-div' v-html='this.$store.state.networkDemoOutput || "Click the button!"'></div>
       </div><!-- column -->
     </div><!-- columns -->
@@ -74,5 +74,6 @@
     color: greenyellow;
     padding: 10px;
     font-size: 11px;
+    overflow: auto;
   }
 </style>
