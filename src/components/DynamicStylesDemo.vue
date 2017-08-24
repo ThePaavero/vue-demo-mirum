@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  export default{
+  export default {
     props: ['title'],
     mounted() {
       const fromDisk = window.localStorage.getItem('dynamicImageWidth')

@@ -14,9 +14,7 @@
       {{ introText }}
     </p>
     <div class='debug-wrapper'>
-      <transition name='fade' mode='out-in'>
-        <DebugForm/>
-      </transition>
+      <DebugForm/>
     </div>
   </div>
 </template>

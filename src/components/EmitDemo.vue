@@ -13,7 +13,7 @@
 
   const defaultOwnTitle = 'I\'m the parent component'
 
-  export default{
+  export default {
     props: ['title'],
     components: {
       EmitDemoChild

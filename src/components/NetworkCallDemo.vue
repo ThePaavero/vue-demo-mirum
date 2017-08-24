@@ -35,7 +35,7 @@
     return '<pre>' + prettyjson.render(data) + '</pre>'
   }
 
-  export default{
+  export default {
     props: ['title'],
     methods: {
       doNetworkCall() {

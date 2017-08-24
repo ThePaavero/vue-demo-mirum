@@ -10,7 +10,7 @@
 
 <script>
   import SourceLink from './SourceLink'
-  export default{
+  export default {
     data() {
       return {
         clickedCounter: 0,
