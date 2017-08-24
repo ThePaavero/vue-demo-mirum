@@ -5,6 +5,7 @@
       type='range'
       min='50'
       max='1400'
+      :value='this.$store.state.dynamicImageWidth'
       @input='updateFromInput'
     />
     <img src='./../assets/mirum.jpg' class='mirum' :style='getInlineStyles()'>

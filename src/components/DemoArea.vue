@@ -39,6 +39,10 @@
       <NetworkCallDemo title='Network call demo'/>
       <SourceLink demoKey='NetworkCallDemo'/>
     </section>
+    <section>
+      <SaveStateToDiskDemo title='Saving the complete state on disk'/>
+      <SourceLink demoKey='SaveStateToDiskDemo'/>
+    </section>
   </div>
 </template>
 
@@ -51,6 +55,7 @@
   import CtrlKeyCombinationDemo from './CtrlKeyCombinationDemo.vue'
   import DynamicArrayDemo from './DynamicArrayDemo.vue'
   import ArrayDemo from './ArrayDemo.vue'
+  import SaveStateToDiskDemo from './SaveStateToDiskDemo.vue'
 
   export default {
     components: {
@@ -61,7 +66,8 @@
       StateBasicsDemo,
       CtrlKeyCombinationDemo,
       DynamicArrayDemo,
-      ArrayDemo
+      ArrayDemo,
+      SaveStateToDiskDemo
     }
   }
 </script>

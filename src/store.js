@@ -1,5 +1,6 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
+import _ from 'lodash'
 
 Vue.use(Vuex)
 
@@ -11,7 +12,8 @@ const state = {
   demoDynamicArrayItemsAdded: 0,
   dynamicImageWidth: 150,
   networkDemoOutput: null,
-  networkDemoSubReddit: null
+  networkDemoSubReddit: null,
+  completeState: null
 }
 
 const mutations = {
@@ -27,7 +29,7 @@ const mutations = {
   addOneToDynamicDemoArray(state) {
     state.demoDynamicArrayItemsAdded++
     state.demoDynamicArray.push(
-        'Added item #' + state.demoDynamicArrayItemsAdded)
+      'Added item #' + state.demoDynamicArrayItemsAdded)
   },
   updateDynamicImageWidth(state, val) {
     state.dynamicImageWidth = val
@@ -37,6 +39,12 @@ const mutations = {
   },
   updateNetworkDemoSubReddit(state, val) {
     state.networkDemoSubReddit = val
+  },
+  updateCompleteState(state, val) {
+    state.completeState = val
+  },
+  applyCompleteStateFromDisk(state) {
+    Object.assign(state, _.cloneDeep(state.completeState))
   }
 }
 

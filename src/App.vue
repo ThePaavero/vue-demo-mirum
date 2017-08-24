@@ -6,6 +6,11 @@
       <img src='./assets/logo.png' class='vue'>
     </header>
     <DemoArea/>
+    <footer>
+      <p>
+        <a href='https://github.com/ThePaavero/vue-demo-mirum/tree/master/src' target='_blank'>Complete application source</a>
+      </p>
+    </footer>
   </div>
 </template>
 
@@ -78,5 +83,15 @@
     margin-left: 20px;
     list-style-type: square;
     padding: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  footer {
+    border-top: solid 2px rgba(0, 0, 0, 0.25);
+    padding: 20px 0;
+    margin-top: 30px;
   }
 </style>
