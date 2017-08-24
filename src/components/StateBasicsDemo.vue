@@ -39,5 +39,6 @@
 
   small {
     color: rgba(0, 0, 0, 0.4);
+    display: block;
   }
 </style>
