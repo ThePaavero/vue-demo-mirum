@@ -4,7 +4,6 @@ import App from './App.vue'
 import store from './store/store'
 
 Vue.use(Vuex)
-Vue.config.productionTip = false
 
 new Vue({
   el: '#app',
