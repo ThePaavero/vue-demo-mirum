@@ -4,7 +4,6 @@
     <button @click='saveToDisk'>Click to save entire state for later use</button>
     <button v-if='this.$store.state.completeState' @click='applyFromDisk'>Click to load previously saved state</button>
     <button v-if='this.$store.state.completeState' @click='emptyDisk'>Click to remove saved state from disk</button>
-
   </div>
 </template>
 
@@ -17,15 +16,13 @@
     },
     methods: {
       saveToDisk() {
-        const state = this.$store.state
-        const stateAsString = JSON.stringify(state)
+        const stateAsString = JSON.stringify(this.$store.state)
         window.localStorage.setItem(myLocalStorageKey, stateAsString)
         this.$store.commit('updateCompleteState', JSON.parse(stateAsString))
       },
       loadFromDisk() {
         const onDisk = window.localStorage.getItem(myLocalStorageKey)
         if (!onDisk) {
-          console.log('No state on disk...')
           return
         }
         this.$store.commit('updateCompleteState', JSON.parse(onDisk))

@@ -31,6 +31,10 @@
     padding: 4vh 10vw;
   }
 
+  h3 {
+    font-size: 3vw;
+  }
+
   input[type=text],
   textarea {
     font-family: 'Asap', sans-serif;
