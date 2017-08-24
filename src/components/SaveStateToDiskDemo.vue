@@ -9,6 +9,7 @@
 
 <script>
   const myLocalStorageKey = 'completeState'
+
   export default {
     props: ['title'],
     mounted() {
