@@ -49,7 +49,7 @@
   }
 </script>
 
-<style scoped>
+<style lang='scss' type='text/scss' scoped>
   .columns {
     display: flex;
     flex-direction: row;
@@ -63,10 +63,10 @@
     background: rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-right: solid 2px #fff;
-  }
 
-  .column:last-child {
-    border: none;
+    &:last-child {
+      border: none;
+    }
   }
 
   .output-div {

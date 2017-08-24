@@ -34,22 +34,22 @@
   }
 </script>
 
-<style scoped>
+<style lang='scss' type='text/scss' scoped>
   form {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-  }
 
-  form .field-wrapper label {
-    font-size: 13px;
-  }
+    .field-wrapper {
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.1);
+      margin: 0 1px;
+      flex: 1;
 
-  form .field-wrapper {
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.1);
-    margin: 0 1px;
-    flex: 1;
+      label {
+        font-size: 13px;
+      }
+    }
   }
 
   input[type=text] {

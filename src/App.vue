@@ -24,7 +24,7 @@
   }
 </script>
 
-<style>
+<style lang='scss' type='text/scss'>
   #app {
     font-family: 'Asap', sans-serif;
     color: #131b26;
@@ -50,22 +50,22 @@
 
   header {
     margin-bottom: 4vh;
-  }
 
-  header img.mirum {
-    width: 20vw;
-  }
+    img.mirum {
+      width: 20vw;
+    }
 
-  header span {
-    display: inline-block;
-    font-size: 5vw;
-    padding: 0 2vw;
-    color: #ff214b;
-  }
+    img.vue {
+      width: 9vw;
+      transform: translateY(1.5vw);
+    }
 
-  header img.vue {
-    width: 9vw;
-    transform: translateY(1.5vw);
+    span {
+      display: inline-block;
+      font-size: 5vw;
+      padding: 0 2vw;
+      color: #ff214b;
+    }
   }
 
   .action-button {

@@ -30,7 +30,7 @@
   }
 </script>
 
-<style scoped>
+<style lang='scss' type='text/scss' scoped>
   input {
     width: 100%;
     padding: 3px 5px;

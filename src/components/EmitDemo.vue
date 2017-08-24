@@ -37,7 +37,7 @@
   }
 </script>
 
-<style scoped>
+<style lang='scss' type='text/scss' scoped>
   .parentComponent {
     background: rgba(0, 0, 0, 0.1);
     padding: 5px 20px;

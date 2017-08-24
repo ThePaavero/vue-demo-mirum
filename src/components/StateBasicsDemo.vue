@@ -32,7 +32,7 @@
   }
 </script>
 
-<style scoped>
+<style lang='scss' type='text/scss' scoped>
   .debug-wrapper {
     margin-top: 10px;
   }

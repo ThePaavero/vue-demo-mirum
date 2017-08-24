@@ -72,7 +72,7 @@
   }
 </script>
 
-<style scoped>
+<style lang='scss' type='text/scss' scoped>
   h1, h2 {
     font-weight: normal;
   }
@@ -94,9 +94,9 @@
   section {
     border-top: solid 2px rgba(0, 0, 0, 0.25);
     padding: 20px 0;
-  }
 
-  section:first-of-type {
-    border: none;
+    &:first-of-type {
+      border: none;
+    }
   }
 </style>
