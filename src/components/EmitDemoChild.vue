@@ -10,6 +10,7 @@
 
 <script>
   import SourceLink from './SourceLink'
+
   export default {
     data() {
       return {
