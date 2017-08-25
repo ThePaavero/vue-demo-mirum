@@ -14,9 +14,7 @@
       {{ introText }}
     </p>
     <div class='debug-wrapper'>
-      <transition name='fade' mode='out-in'>
-        <DebugForm/>
-      </transition>
+      <DebugForm/>
     </div>
   </div>
 </template>
@@ -32,7 +30,7 @@
   }
 </script>
 
-<style scoped>
+<style lang='scss' type='text/scss' scoped>
   .debug-wrapper {
     margin-top: 10px;
   }

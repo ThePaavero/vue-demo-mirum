@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  export default{
+  export default {
     props: ['demoKey'],
     methods: {
       getHref(key) {
@@ -15,7 +15,7 @@
   }
 </script>
 
-<style scoped>
+<style lang='scss' type='text/scss' scoped>
   a {
     opacity: 0.6;
     display: inline-block;

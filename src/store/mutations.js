@@ -1,22 +1,6 @@
-import Vuex from 'vuex'
-import Vue from 'vue'
 import _ from 'lodash'
 
-Vue.use(Vuex)
-
-const state = {
-  mainTitle: 'Example Vue Application',
-  introText: 'Hello, world!',
-  demoArray: ['A', 'B', 'C'],
-  demoDynamicArray: [1, 2, 3, 4],
-  demoDynamicArrayItemsAdded: 0,
-  dynamicImageWidth: 150,
-  networkDemoOutput: null,
-  networkDemoSubReddit: null,
-  completeState: null
-}
-
-const mutations = {
+export default {
   updateMainTitle(state, val) {
     state.mainTitle = val
   },
@@ -29,7 +13,7 @@ const mutations = {
   addOneToDynamicDemoArray(state) {
     state.demoDynamicArrayItemsAdded++
     state.demoDynamicArray.push(
-      'Added item #' + state.demoDynamicArrayItemsAdded)
+        'Added item #' + state.demoDynamicArrayItemsAdded)
   },
   updateDynamicImageWidth(state, val) {
     state.dynamicImageWidth = val
@@ -47,17 +31,3 @@ const mutations = {
     Object.assign(state, _.cloneDeep(state.completeState))
   }
 }
-
-const getters = {
-  getFormattedMainTitle(state) {
-    return `"${state.mainTitle}"`.toUpperCase()
-  }
-}
-
-const store = new Vuex.Store({
-  state,
-  getters,
-  mutations
-})
-
-export default store

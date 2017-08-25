@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  export default{
+  export default {
     props: ['title'],
     mounted() {
       const fromDisk = window.localStorage.getItem('dynamicImageWidth')
@@ -41,7 +41,7 @@
   }
 </script>
 
-<style scoped>
+<style lang='scss' type='text/scss' scoped>
   img {
     display: block;
     margin-top: 20px;
