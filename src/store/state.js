@@ -7,5 +7,5 @@ export default {
   dynamicImageWidth: 150,
   networkDemoOutput: null,
   networkDemoSubReddit: null,
-  completeState: null
+  completeStateAvailableOnDisk: false
 }

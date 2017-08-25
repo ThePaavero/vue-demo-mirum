@@ -13,7 +13,7 @@ export default {
   addOneToDynamicDemoArray(state) {
     state.demoDynamicArrayItemsAdded++
     state.demoDynamicArray.push(
-        'Added item #' + state.demoDynamicArrayItemsAdded)
+      'Added item #' + state.demoDynamicArrayItemsAdded)
   },
   updateDynamicImageWidth(state, val) {
     state.dynamicImageWidth = val
@@ -24,10 +24,10 @@ export default {
   updateNetworkDemoSubReddit(state, val) {
     state.networkDemoSubReddit = val
   },
-  updateCompleteState(state, val) {
-    state.completeState = val
+  updateCompleteStateAvailableOnDisk(state, val) {
+    state.completeStateAvailableOnDisk = val
   },
-  applyCompleteStateFromDisk(state) {
-    Object.assign(state, _.cloneDeep(state.completeState))
+  applyCompleteStateFromDisk(state, val) {
+    Object.assign(state, _.cloneDeep(val))
   }
 }
